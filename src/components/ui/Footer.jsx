@@ -227,6 +227,7 @@ const Footer = ({ isDark }) => {
             <div className="flex gap-4">
               <a
                 href="#"
+                aria-label="Visit us on LinkedIn"
                 className={`p-3 md:p-2 rounded bg-white text-blue-900 hover:scale-110 transition-transform shadow-md`}
               >
                 <Linkedin
@@ -237,6 +238,7 @@ const Footer = ({ isDark }) => {
               </a>
               <a
                 href="#"
+                aria-label="Send us an email"
                 className={`p-3 md:p-2 rounded bg-white text-blue-900 hover:scale-110 transition-transform shadow-md`}
               >
                 <Mail size={24} />

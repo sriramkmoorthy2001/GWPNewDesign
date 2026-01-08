@@ -79,7 +79,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
                         <button
                             onClick={toggleTheme}
                             className={`p-2 rounded-full transition-colors duration-300 ${isDark ? 'bg-white/10 hover:bg-white/20 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-800'}`}
-                            aria-label="Toggle theme"
+                            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
                         >
                             {isDark ? <Sun size={24} /> : <Moon size={24} />}
                         </button>
@@ -90,12 +90,15 @@ const Navbar = ({ isDark, toggleTheme }) => {
                         <button
                             onClick={toggleTheme}
                             className={`p-2 rounded-full transition-colors duration-300 ${isDark ? 'bg-white/10 text-white' : 'bg-gray-200 text-gray-800'}`}
+                            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
                         >
                             {isDark ? <Sun size={24} /> : <Moon size={24} />}
                         </button>
                         <button
                             onClick={toggleMenu}
                             className={`p-2 rounded-md ${isDark ? 'text-white hover:bg-white/10' : 'text-gray-800 hover:bg-gray-200'}`}
+                            aria-label={isOpen ? "Close menu" : "Open menu"}
+                            aria-expanded={isOpen}
                         >
                             {isOpen ? <X size={32} /> : <Menu size={32} />}
                         </button>

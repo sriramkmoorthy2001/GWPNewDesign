@@ -1,0 +1,41 @@
+.training-section {
+    background: linear-gradient(to bottom, #000, #050505);
+    padding: 150px 5%;
+}
+
+.training-inner {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.training-content {
+    flex: 1;
+}
+
+.training-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+}
+
+.training-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.training-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--secondary-text);
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+    .training-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}

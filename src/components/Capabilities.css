@@ -1,0 +1,88 @@
+.capabilities-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.capability-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.capability-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.capability-text {
+    flex: 1;
+}
+
+.capability-visual {
+    flex: 1.2;
+}
+
+.capability-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--secondary-text);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.btn-electric {
+    background: var(--electric-blue);
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border-radius: 4px;
+}
+
+.btn-electric:hover {
+    transform: translateY(-2px);
+    background: #0052cc;
+}
+
+.abstract-shape {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.capability-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.capability-item:hover .capability-img {
+    transform: scale(1.05);
+}
+
+.capability-item.reverse .capability-inner {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 1024px) {
+    .capability-inner {
+        flex-direction: column !important;
+        gap: 60px;
+    }
+
+    .capability-text {
+        text-align: center;
+    }
+}
